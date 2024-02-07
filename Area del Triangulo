@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+float area(int base, int altura);
+int main()
+
+{
+    float b,h;
+ 
+    cout<<"ingrese los datos de la base"<<endl;
+    do{
+        cin>>b;
+    }while(b<=0);
+     cout<<"ingrese los datos de la altura"<<endl;
+    do{
+        cin>>h;
+    }while(h<=0);
+    cout<<"el area es :"<<area(b,h)<<endl;
+    return 0;
+}
+float area(int base, int altura)
+{
+    float aux;
+    aux=base*altura/2.0;
+    return aux;
+}
