@@ -1,0 +1,96 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <math.h>
+#include <string>
+using namespace std;
+void esfera();
+float potencia(float n, float m);
+string vocales(const string& p);
+int main()
+{int op;
+float a, b;
+string p;
+
+do{
+    
+  cout<<"     menu de operaciones        "<<endl;
+    cout<<"1.- sacar el volumen de una esfera"<<endl;
+    cout<<"2.- la potencia de un numero dado"<<endl;
+    cout<<"3.- sacar las vocales de una palabra ingresada"<<endl;
+    cout<<"0.- salir del programa"<<endl;
+    cin>>op;
+    switch(op)
+    {
+        case 1:
+        esfera();
+        break;
+        case 2:
+        cout<<"ingrese el exponente"<<endl;
+   cin>>a;
+   cout<<"ingrese la base del exponente"<<endl;
+   cin>> b;
+   
+       cout<<"la potencia es :"<<potencia(a,b)<<endl;;
+        break;
+        case 3:
+        cout<<"ingrese una cadena de texto"<<endl;
+        getline(cin,p);
+    
+        cout<<"la cadena sin vocales es "<<endl;
+    cout<<vocales(p)<<endl;
+        break;
+        case 0:
+        break;
+        default:
+        cout<<"datos erroneos intente nuevamente"<<endl;
+    break;
+    
+        
+    }
+}
+while(op!=0);
+
+
+    
+}
+void esfera()
+{
+    float r;
+float volumen;
+
+
+
+    cout<<"ingrese el radio de la esfera"<<endl;
+    cin>>r;
+    volumen=(3.0/4.0) *3.1415 *pow(r,3);
+    cout<<"el volumen de la esfera es :"<<volumen<<endl;
+    
+    
+}
+float potencia(float n, float m)
+{float result;
+ 
+   result=pow(m,n);
+   return result;
+   
+}
+string vocales(const string& p)
+{ 
+    string resultado;
+    for (char c: p)
+    {
+        if(c!='a' &&c!='e' &&c!='i' &&c!='o' &&c!='u' &&c!='A' &&c!='E' &&c!='I' &&c!='O'&&c!='U' )
+        {
+            resultado+=c;
+        }
+    }
+    return resultado;
+    
+}
