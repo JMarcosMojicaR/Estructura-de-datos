@@ -27,6 +27,7 @@ do{
     cout<<"0.- salir del programa"<<endl;
     cin>>op;
     switch(op)
+cin.ignore();
     {
         case 1:
         esfera();
