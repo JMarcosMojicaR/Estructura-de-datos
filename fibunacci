@@ -1,0 +1,23 @@
+/******************************************************************************
+Fibunacci,21/02/24,Jean Marcos Mojica
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+int fibu(int m);
+int main()
+{int n;
+    cout<<"ingrese un numero para la serie fibonacci"<<endl;
+    cin>>n;
+    cout<<"el quinto valor del fibonacci es :"<<fibu(n)<<endl;
+    
+}
+int fibu(int m)
+{
+    
+    if(m==0||m==1)
+    return 1;
+    else
+   { cout<<m<<" ";
+    return fibu(m-2)+fibu(m-1);}
+}
