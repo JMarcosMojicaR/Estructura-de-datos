@@ -1,0 +1,11 @@
+thonny trabajo
+
+def potencia(a,b):
+    if b==0:
+        return 1
+    else:
+        return a*potencia(a,b-1)
+base=float(input("ingrese la base"))
+exponente=float(input("ingrese el exponente"))
+resultado=potencia(base,exponente)
+print (resultado)
