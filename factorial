@@ -1,0 +1,28 @@
+/******************************************************************************
+Factorial,21/02/24,Jean Marcos Mojica
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+int fact(int m);
+
+int main()
+{int n;
+
+    cout<<"ingresar el numero"<<endl;
+    cin>>n;
+cout<<"el factorial de n es :"<<fact(n)<<endl;
+
+    return 0;
+}
+int fact(int m)
+{
+    if(m==0)
+    return 1;
+    else 
+    {
+
+    return m*fact(m-1);}
+    
+    
+}
