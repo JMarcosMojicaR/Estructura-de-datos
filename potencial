@@ -1,0 +1,25 @@
+/******************************************************************************
+potencia,21/02/24,Jean Marcos Mojica
+*******************************************************************************/
+
+#include <iostream>
+using namespace std;
+int poten(int n, int m);
+int main()
+{int n,m;
+    cout<<"ingrese la base"<<endl;
+    cin>>n;
+    cout<<"ingrese el exponente"<<endl;
+    cin>>m;
+    cout<<"el numero potenciado es :"<<poten(m,n)<<endl;
+    
+}
+int poten(int n,int m)
+{
+    if(n==0)
+    return 1;
+    else
+    return m*poten(n-1,m);
+    
+    
+}
