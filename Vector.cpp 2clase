@@ -1,0 +1,21 @@
+// vector.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+//
+
+#include <iostream>
+#include "clasevector.h"
+using namespace std;
+#define Max 100
+int main()
+{
+	int t, v[MAX];
+	clasevector v1;
+	cout << "ingrese el numero de elementos" << endl;
+	do {
+		cin >> t;
+	} while (t > MAX || t < 0);
+	v1.set_n(t);//cambian el valor del atributo de la clase vector
+	v1.cargar(t, v);
+	v1.mostrar(v);
+//	v1.ordenar(v, int v2);
+	v1.promedio(v, t);
+}
