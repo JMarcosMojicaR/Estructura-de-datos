@@ -1,0 +1,56 @@
+#include <iostream>
+#include "Matriz.h"
+#define MAX 20
+using namespace std;
+int main() {
+	Matriz v1, v2, v3;
+	int matriz[MAX][MAX], fil, col, opc;
+	int matriz2[MAX][MAX], matriz3[MAX][MAX];
+	float prom;
+	do {
+		cout << "Ingrese el numero de filas: ";
+		cin >> fil;
+	} while ((fil <= 0) || (fil > MAX));
+	v1.set_fil(fil);//cambiando el valor del atributo
+
+	do {
+		cout << "Ingrese el numero de columnas: ";
+		cin >> col;
+	} while ((col <= 0) || (col > MAX));
+	v1.set_col(col);
+	//Menu
+	do {
+		cout << "\t Menu\n";
+		cout << "\t ====\n\n";
+		cout << "(1) Cargar Matriz\n";
+		cout << "(2) Mostrar Matriz\n";
+		cout << "(3) Promedio Matriz\n";
+		cout << "(4) Mayor Matriz\n";
+		cout << "(5) Sumar Matriz" << endl;
+		cout << "(0) Salir\n";
+		cout << "Opcion:";
+		cin >> opc;
+		switch (opc) {
+		case 1: v1.cargarmat(matriz);
+			v1.cargarmat(matriz2);
+			v1.cargarmat(matriz3);
+			
+			break;
+		case 2: v1.mostrarmat(matriz, fil, col);
+			break;
+		case 3: prom = v1.promedio(matriz, fil, col);
+			cout << "El valor promedio es: " << prom;
+			break;
+		case 4: cout << "El mayor es: " << v1.mayor(matriz, fil, col);
+			break;
+		case 5: v1.suma(matriz, matriz2, matriz3);
+			break;
+		case 0: cout << "Salir\n";
+			break;
+		default: cout << "Error\n";
+			break;
+		}
+		system("pause");
+		system("cls"); // Limpie la pantalla y funciona stdlib
+	} while (opc != 0);
+}
